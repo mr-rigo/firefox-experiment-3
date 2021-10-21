@@ -1,1 +1,2 @@
-# firefox-experiment-3
+# Experiment 3
+Plugin for downloading content from websites 
