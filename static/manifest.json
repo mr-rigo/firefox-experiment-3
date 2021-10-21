@@ -1,0 +1,43 @@
+{
+  "description": "Plugin for downloading content from websites",
+  "manifest_version": 2,
+  "name": "Experiment 3",
+  "version": "0.3.1",
+  "homepage_url": "https://github.com/mr-rigo/firefox-experiment-3",
+  "icons": {
+    "48": "icon.svg"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "notifications",
+    "nativeMessaging",
+    "tabHide",
+    "<all_urls>",
+    "downloads",
+    "cookies",    
+    "storage",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [        
+        "content.js"
+      ]
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "experiment-3@example.com"
+    }
+  }
+}
